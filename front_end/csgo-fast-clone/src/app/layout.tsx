@@ -5,6 +5,7 @@ import '../components/NavigationComponent/SideNavigation'
 import SideNavigation from '../components/NavigationComponent/SideNavigation'
 import TopNavigation from '../components/NavigationComponent/TopNavigation'
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body >
           <TopNavigation />
           <SideNavigation />
+
       </body>
     </html>
   )
