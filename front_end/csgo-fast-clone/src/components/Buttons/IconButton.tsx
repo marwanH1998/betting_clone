@@ -10,7 +10,7 @@ const IconButton:FC<IconButtonProps> = (props) => {
     return (
         <a
         href="#"
-        onClick={() => alert("Icon Clicked")}
+        onClick={props.onClick}
         className="mr-6 text-gray-700 hover:text-white"
         >
         <i className={props.className}></i>

@@ -3,3 +3,4 @@ export type NavigationItem = {
     path: string;
     icon?: JSX.Element;
   };
+
