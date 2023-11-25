@@ -1,12 +1,14 @@
 'use client';
 
+import { selectGlobal } from '@/redux/slices/globalSettingsSlice';
 import ButtonWithIcon from '../Buttons/ButtonWithIcon';
 import IconButton from '../Buttons/IconButton';
 import LanguagesDropDown from '../Dropdown/LanguagesDropDown';
 import Logo from '../statics/Logo';
-
+import { useAppDispatch,useAppSelector } from '@/redux/hooks';
 const TopNavigation = () => {
-    
+    const count = useAppSelector(selectGlobal);
+
     const FaqIconFunction = ():void=>{
       alert("ROUTE ME TO FAQ")
     }
@@ -14,7 +16,8 @@ const TopNavigation = () => {
       alert("Sound off sound on toggle")
     }
     const LoginFunction = ():void =>{
-      alert("Login Modal")
+      alert("Login Modal, " + count.value)
+
     }
     return (
       <div className="w-full h-16 fixed bg-black flex">
