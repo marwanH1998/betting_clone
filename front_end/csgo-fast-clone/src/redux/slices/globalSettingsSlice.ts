@@ -2,36 +2,36 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import type { RootState } from '../store'
 
 // Define a type for the slice state
-interface CounterState {
-  value: number
+interface GlobalSettingState {
+  language: string,
+  sound:boolean
 }
 
 // Define the initial state using that type
-const initialState: CounterState = {
-  value: 0
+const initialState: GlobalSettingState = {
+    language: "en",
+    sound:true
+
 }
 
-export const counterSlice = createSlice({
-  name: 'counter',
+export const globalSettingSlice = createSlice({
+  name: 'global settings',
   // `createSlice` will infer the state type from the `initialState` argument
   initialState,
   reducers: {
-    increment: state => {
-      state.value += 1
-    },
-    decrement: state => {
-      state.value -= 1
+    changeLanguage: (state, action: PayloadAction<string>) => {
+      state.language = action.payload
     },
     // Use the PayloadAction type to declare the contents of `action.payload`
-    incrementByAmount: (state, action: PayloadAction<number>) => {
-      state.value += action.payload
+    toggleSound: state => {
+      state.sound = ! state.sound
     }
   }
 })
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export const { changeLanguage, toggleSound } = globalSettingSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
-export const selectGlobal = (state: RootState) => state.global
+export const selectGlobalSettings = (state: RootState) => state.global
 
-export default counterSlice.reducer
+export default globalSettingSlice.reducer
