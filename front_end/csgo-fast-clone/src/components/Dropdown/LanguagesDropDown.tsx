@@ -15,7 +15,7 @@ const LanguagesDropDown = () => {
     return (
         <Dropdown className='w-12 min-w-200'  placeholder="Select a country">
             <DropdownTrigger className="mr-4">
-            <div className="HELO">
+            <div>
                 <Flag     style={{fontSize: '1.5em',lineHeight: '1.5em',}}
                  countryCode={chosenLanguage} svg />
             </div>
