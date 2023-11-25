@@ -20,9 +20,9 @@ const LanguagesDropDown = () => {
                  countryCode={chosenLanguage} svg />
             </div>
             </DropdownTrigger>
-            <DropdownMenu style={{fontSize: '1.5em',lineHeight: '1.5em',}} >
+            <DropdownMenu aria-label="Languages" style={{fontSize: '1.5em',lineHeight: '1.5em',}} >
             {languages.map((language) => (
-                <DropdownItem style={{fontSize: '1.5em',lineHeight: '1.5em',}} key={language.code} onClick={() => setChosenLanguage(language.code)} >
+                <DropdownItem style={{fontSize: '1.5em',lineHeight: '1.5em',}} key={language.code} onClick={() => setChosenLanguage(language.code)} textValue={language.language} >
                       <div>
                       <Flag   style={{fontSize: '1.5em',lineHeight: '1.5em',}}   countryCode={language.code} svg />
                     </div>    

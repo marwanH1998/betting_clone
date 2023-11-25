@@ -13,16 +13,23 @@ const Logo = ()=> {
     <Image
       src={logo}
       alt="LOGO"
-      layout='fill'
-      objectFit='contain'
+      style={{
+        objectFit: 'contain',
+      }}
+      fill = {true}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
     />
     </div>
     <div className="h-full w-48 relative">
   <Image
     src={logo_2}
     alt="Second Image"
-    layout='fill'
-    objectFit='contain'
+    style={{
+      objectFit: 'contain',
+    }}
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+    fill = {true}
 
   />
     </div></Fragment>
