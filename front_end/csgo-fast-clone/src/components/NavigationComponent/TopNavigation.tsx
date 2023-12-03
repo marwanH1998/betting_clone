@@ -9,6 +9,7 @@ import { useAppDispatch,useAppSelector } from '@/redux/hooks';
 import  { toggleSound } from '../../redux/slices/globalSettingsSlice';
 
 const TopNavigation = () => {
+
     const globalSettings = useAppSelector(selectGlobalSettings);
     const dispatch = useAppDispatch();
     const FaqIconFunction = ():void=>{
